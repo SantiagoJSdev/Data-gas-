@@ -9,12 +9,12 @@ exports.numeros = connection_1.db.define('numeros', {
         primaryKey: true,
         autoIncrement: true
     },
-    numero1: {
-        type: sequelize_1.DataTypes.INTEGER,
+    total: {
+        type: sequelize_1.DataTypes.STRING
     },
-    numero2: {
-        type: sequelize_1.DataTypes.INTEGER,
-    },
+    // numero2: {
+    //     type: DataTypes.INTEGER,
+    // },
 }, {
 // timestamps: true
 });

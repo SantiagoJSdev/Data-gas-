@@ -9,12 +9,12 @@ export const numeros =  db.define('numeros', {
         primaryKey: true,
         autoIncrement: true
     },
-    numero1: {
-        type: DataTypes.INTEGER,
+    total: {
+        type: DataTypes.STRING
     },
-    numero2: {
-        type: DataTypes.INTEGER,
-    },
+    // numero2: {
+    //     type: DataTypes.INTEGER,
+    // },
     
 }, {
     // timestamps: true
