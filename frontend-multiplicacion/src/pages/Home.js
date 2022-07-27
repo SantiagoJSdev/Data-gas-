@@ -1,5 +1,7 @@
 import React from 'react'
+import { Historial } from '../component/Historial'
 import { PrincipalLeft } from '../component/PrincipalLeft'
+import { PrincipalRight } from '../component/PrincipalRight'
 import '../styles/home.css'
 
 export const Home = () => {
@@ -16,7 +18,8 @@ export const Home = () => {
                 <PrincipalLeft/>
               </div>
               <div className='home__principal--right'>
-              <div className='home__principal--right2'></div>
+                {/* <PrincipalRight/> */}
+                <Historial/>
               </div>
                
             </section>

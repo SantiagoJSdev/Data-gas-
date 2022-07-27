@@ -4,6 +4,18 @@ body {
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Source+Serif+Pro:wght@200;400&display=swap');
 
+:root {
+    --color-black: black;
+    --color-white: white;
+    --color-icomSocial: #2D2D2C;
+    --border-color: #272727;
+    --border-button: #7C829D;
+    --custom-filter:
+        drop-shadow(-11px 1px 3px var(--border-color));
+    /* drop-shadow(5px 5px 10px var(--border-color))
+    drop-shadow(5px 5px 10px var(--border-color))
+    drop-shadow(5px 5px 10px var(--border-color)); */
+}
 
 .home__container {
     width: 100%;
@@ -60,25 +72,16 @@ body {
 .home__principal--right {
     width: 40%;
     height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: #ffffff;
     border-radius: 74px;
-position: relative;
--webkit-box-shadow: -1px 10px 17px -3px rgba(0,0,0,0.75);
--moz-box-shadow: -1px 10px 17px -3px rgba(0,0,0,0.75);
-box-shadow: -1px 10px 17px -3px rgba(0,0,0,0.75);
-    /* border: 2px solid rgb(191, 255, 0); */
+    position: relative;
+    border: none;
     z-index: 9;
-    /* border-radius: 50px;
-    background: #e0e0e0;
-    box-shadow:  21px 21px 0px #cecece,
-                 -21px -21px 0px #f2f2f2; */
-}
-.home__principal--right2{
-    width: 100%;
-    height: 100%;
-    background: #ad3434;
-    border-radius: 74px;
-    z-index: 9;
-    position: absolute;
-    transform: translate(22px, -16px);
+    border-radius: 50px;
+    background: #ffffff;
+    box-shadow:  21px 21px 0px #ffffff ,
+                 -21px -21px 0px #cecece;
 }
