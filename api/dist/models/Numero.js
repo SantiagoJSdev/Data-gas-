@@ -10,7 +10,8 @@ exports.numeros = connection_1.db.define('numeros', {
         autoIncrement: true
     },
     total: {
-        type: sequelize_1.DataTypes.STRING
+        type: sequelize_1.DataTypes.STRING,
+        allowNull: false
     },
     // numero2: {
     //     type: DataTypes.INTEGER,

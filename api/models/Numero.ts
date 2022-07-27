@@ -10,7 +10,8 @@ export const numeros =  db.define('numeros', {
         autoIncrement: true
     },
     total: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
+        allowNull: false
     },
     // numero2: {
     //     type: DataTypes.INTEGER,
