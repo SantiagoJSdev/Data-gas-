@@ -1,22 +1,28 @@
 .historial__container{
     width: 100%;
     height: 100%;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .historial__container > ul{
     width: 95%;
     height: 95%;
     /* border: 2px solid rgb(2, 2, 19); */
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    padding-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    gap: 1.25rem;
+    padding-top: 2.875rem;
+    overflow: hidden;
+    overflow-y:scroll;
 }
 .historial__container > ul >li{
-    width: 30%;
+    width: 100%;
+    text-align: center;
     /* height: 20%; */
     /* border: 2px solid green; */
     /* text-overflow: ellipsis;
@@ -24,4 +30,13 @@
     overflow: hidden;
     position: relative; */
 }
- 
+.historial__container > h1{
+    color: #272727;
+    font-size: calc(1em + 1vw);
+    font-weight: 700;
+    margin-top: 20px;
+   
+}
+.display__btn{
+    display: none;
+}

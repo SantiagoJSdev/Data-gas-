@@ -9,7 +9,7 @@ export const PrincipalRight = () => {
             <div className='right__content'>
                 <div className='right__content--resultado'>
                     <h2>Resultado</h2>
-                    <p>4522322516556156165516552</p>
+                    <p>452232654654646456165516552</p>
                 </div>
             </div>
         </>

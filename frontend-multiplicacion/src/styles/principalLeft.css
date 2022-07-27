@@ -48,7 +48,7 @@
 
 .left__container--numero1>input::placeholder {
     color: black;
-    padding-left: 160px;
+    padding-left: 10rem;
 
 }
 
@@ -60,8 +60,8 @@
     width: calc(6em + 6vw);
     height: calc(1.2em + 1.2vw);
     background: white;
-    margin-top: 50px;
-    border-radius: 10px;
+    margin-top: 3.125rem;
+    border-radius: 0.625rem;
     font-size: calc(0.8em + 0.8vw);
     color: #272727;
     font-weight: 800;
@@ -76,37 +76,8 @@
 }
 
 .left__container--button>i {
-    margin-right: 30px;
+    margin-right: 1.875rem;
 
 }
 
-/* .left__container--numero2 {
-    margin-top: 3.125rem;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.left__container--numero2 > label{
-   
-    font-size: calc(0.8em + 0.8vw);
-    color: #ffffff;
-    font-weight: 600;
-     margin-left:  20px;
-}
-.left__container--numero2 > input{
-    width: calc(12.5em + 12.5vw);
-    height: calc(1.5em + 1.5vw);
-    background: white;
-    border: none;
-    align-self:center;
-    border-radius: 10px;
-    outline: none;
-    padding-left: 10px;
-}
-.left__container--numero2 > input::placeholder{
-    color: black;
-}
-.left__container--numero2 > input:focus{
-    background: rgb(231, 230, 230);
-} */
+ 

@@ -6,6 +6,7 @@ export const Historial = () => {
   return (
     <>
     <div className='historial__container'>
+        <h1>Historico</h1>
         <ul>
             <li>64644641156665</li>
             <li>65655156156665</li>
