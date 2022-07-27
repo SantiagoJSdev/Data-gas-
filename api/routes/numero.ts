@@ -7,10 +7,12 @@ import { deleteAllResultado, getNumeros, postResultado } from "../controllers/nu
 
 const router = Router();
 
+//Ruta: /api/resultados
+
 //Obtener todos los resultados
 router.get('/',       getNumeros)
 
-//guarda el resultado en base de dato y devuelve el resultado
+//guarda el resultado en base de dato y devuelve el total multiplicacion
 router.post('/', [
     check('numero1','El numero1 es obligatorio').not().isEmpty(),
     check('numero2','El numero2 es obligatorio').not().isEmpty(),

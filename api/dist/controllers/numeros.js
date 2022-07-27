@@ -18,7 +18,7 @@ const getNumeros = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
     res.json(nums.map(({ total }) => total));
 });
 exports.getNumeros = getNumeros;
-//funcion para guarda el resultado en base de dato y devuelve el resultado
+//funcion para guarda el resultado en base de dato y devuelve el total multiplicacion
 const postResultado = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { numero1, numero2 } = req.body;
     //realizo calculo de numeros grandes con una funcion helpers/calculadora

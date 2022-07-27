@@ -15,7 +15,7 @@ export const getNumeros = async (req: Request, res: Response) => {
 }
 
 
-//funcion para guarda el resultado en base de dato y devuelve el resultado
+//funcion para guarda el resultado en base de dato y devuelve el total multiplicacion
 export const postResultado = async (req: Request, res: Response) => {
 
     const { numero1, numero2 } = req.body;
@@ -27,7 +27,6 @@ export const postResultado = async (req: Request, res: Response) => {
             msg: 'Solo debe contener numeros',
         }) 
     }
-    
     const total: string = calculadora(numero1, numero2);
 
 
