@@ -11,7 +11,7 @@ class Server {
     private port: string;
     private paths = {
        numeros: '/api/resultados'
-    }
+    } 
 
 
     constructor() {

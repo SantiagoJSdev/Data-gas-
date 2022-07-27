@@ -13,6 +13,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .left__container>h1 {
@@ -60,7 +61,7 @@
     width: calc(6em + 6vw);
     height: calc(1.2em + 1.2vw);
     background: white;
-    margin-top: 3.125rem;
+    margin-top: 6.125rem;
     border-radius: 0.625rem;
     font-size: calc(0.8em + 0.8vw);
     color: #272727;
@@ -80,4 +81,14 @@
 
 }
 
- 
+ .mensaje-form{
+    font-size: calc(1em + 1vw);
+    /* margin-top: 40px; */
+    color: #ffffff;
+    align-self: center;
+    transform: translateY(30px);
+    
+ }
+ .mensaje-none{
+    display: none;
+ }

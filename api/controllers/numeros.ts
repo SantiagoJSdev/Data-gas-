@@ -24,7 +24,7 @@ export const postResultado = async (req: Request, res: Response) => {
     let reg = /^[0-9]*(\.?)[0-9]+$/
     if (!reg.test(numero1) || !reg.test(numero2)) {
        return res.json({
-            msg: 'Solo debe contener numeros',
+            errors: 'Solo debe contener numeros',
         }) 
     }
     const total: string = calculadora(numero1, numero2);
@@ -35,7 +35,6 @@ export const postResultado = async (req: Request, res: Response) => {
         const num = await numeros.create({ total: total });
 
         res.json({
-            msg: 'postUsuario ok',
             num
         })
 

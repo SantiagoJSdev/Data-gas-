@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { allResultados } from '../action/resultadoBack'
 import { Historial } from '../component/Historial'
 import { PrincipalLeft } from '../component/PrincipalLeft'
 import { PrincipalRight } from '../component/PrincipalRight'
@@ -10,9 +11,12 @@ export const Home = () => {
     activo: false
   })
   const { activo } = state;
-  const handleVerHistorial = () => {
-    setState((item) => ({ ...item, activo: !item.activo }))
-    console.log(state)
+
+  const handleVerHistorial = async () => {
+
+    let resul = await allResultados()
+    setState((item) => ({ ...item, activo: !item.activo, resul }))
+    // console.log(state)
 
   }
 
@@ -27,9 +31,9 @@ export const Home = () => {
         <div className='home__principal--left'>
           {
             activo ?
-            <div className='left__contentBtn'>
-              <i className="fas fa-cog rotate"></i>
-              <button onClick={handleVerHistorial}>Calcular</button>
+              <div className='left__contentBtn'>
+                <i className="fas fa-cog rotate"></i>
+                <button onClick={handleVerHistorial}>Calcular</button>
               </div>
               :
               <PrincipalLeft />
@@ -40,7 +44,9 @@ export const Home = () => {
         <div className='home__principal--right'>
           {
             activo ?
-              <Historial />
+              <Historial
+                resul={state.resul}
+              />
               :
               <PrincipalRight />
 

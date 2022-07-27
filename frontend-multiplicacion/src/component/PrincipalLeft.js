@@ -1,10 +1,16 @@
 
 
-import React from 'react'
+import React, { useContext } from 'react'
+import { postGuardar } from '../action/resultadoBack';
+import { ResultadoContext } from '../context/ResultadoContext';
+import { validate } from '../helpers/validate';
 import { useForm } from '../hook/useForm';
 import '../styles/principalLeft.css'
+import { types } from '../types/types';
 
 export const PrincipalLeft = () => {
+
+    const { resul, dispatch } = useContext(ResultadoContext);
 
     const [values, handleInputChange, , reset] = useForm({
         numero1: '',
@@ -12,10 +18,29 @@ export const PrincipalLeft = () => {
     });
     const { numero1, numero2 } = values;
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
+
         e.preventDefault()
-        console.log(values)
+        let validacionForm = validate(numero1, numero2)
+
+        if (!Object.keys(validacionForm).length) {
+
+            let respuesta = await postGuardar(values)
+
+            dispatch({
+                type: types.postResul,
+                payload: respuesta.num.total
+            })
+
+        } else {
+
+            dispatch({
+                type: types.validate,
+                payload: validacionForm
+            })
+        }
         reset()
+
     }
 
 
@@ -46,7 +71,16 @@ export const PrincipalLeft = () => {
                         value={numero2}
                         onChange={handleInputChange}
                     ></input>
+
                 </div>
+                {
+
+                    (resul.errors && !Object.keys(resul.errors).length) ?
+                        ''
+                        :
+                        <h3 className='mensaje-form'>{resul.errors}</h3>
+                }
+
                 <button type='submit' className='left__container--button'><i className="fas fa-calculator"></i>Calcular</button>
             </form>
         </div>

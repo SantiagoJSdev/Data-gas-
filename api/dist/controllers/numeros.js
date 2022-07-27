@@ -25,14 +25,13 @@ const postResultado = (req, res) => __awaiter(void 0, void 0, void 0, function* 
     let reg = /^[0-9]*(\.?)[0-9]+$/;
     if (!reg.test(numero1) || !reg.test(numero2)) {
         return res.json({
-            msg: 'Solo debe contener numeros',
+            errors: 'Solo debe contener numeros',
         });
     }
     const total = (0, calculadora_1.calculadora)(numero1, numero2);
     try {
         const num = yield Numero_1.numeros.create({ total: total });
         res.json({
-            msg: 'postUsuario ok',
             num
         });
     }
