@@ -10,7 +10,6 @@ export const resultadoReducer = (state = {}, action) => {
             return {
                 ...state,
                 postResultado: action.payload,
-                // resultado: [],
                 errors: {}
             }
         case types.validate:

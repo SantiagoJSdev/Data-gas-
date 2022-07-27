@@ -36,7 +36,17 @@
     font-weight: 600;
 }
 
-.left__container--numero1>input {
+/* .left__container--numero1>input {
+    width: calc(12.5em + 12.5vw);
+    height: calc(1.5em + 1.5vw);
+    background: white;
+    border: none;
+    align-self: center;
+    border-radius: 0.625rem;
+    outline: none;
+    padding-left: 0.625rem;
+} */
+.numero1__input {
     width: calc(12.5em + 12.5vw);
     height: calc(1.5em + 1.5vw);
     background: white;
@@ -46,7 +56,6 @@
     outline: none;
     padding-left: 0.625rem;
 }
-
 .left__container--numero1>input::placeholder {
     color: black;
     padding-left: 9.6rem;
@@ -86,9 +95,19 @@
     /* margin-top: 40px; */
     color: #ffffff;
     align-self: center;
-    transform: translateY(30px);
+    transform: translateY(1.875rem);
     
  }
  .mensaje-none{
     display: none;
+ }
+ .activa-mensaje{
+    width: calc(12.5em + 12.5vw);
+    height: calc(1.5em + 1.5vw);
+    background: rgba(226, 60, 60, 0.532);
+    border: none;
+    align-self: center;
+    border-radius: 0.625rem;
+    outline: none;
+    padding-left: 0.625rem;
  }

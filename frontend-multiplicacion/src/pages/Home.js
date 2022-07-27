@@ -60,23 +60,23 @@ export const Home = () => {
           {
             activo ?
               <Historial
-              // resul={state.resul}
               />
               :
               <PrincipalRight />
           }
-
 
           <button
             onClick={handleVerHistorial}
             className={activo ? 'display__btn' : 'right__historialBtn'}
           >Ver Historial
           </button>
+
           <button
             onClick={handleEliminarHistorial}
             className={activo ? 'right__historialBtn' : 'display__btn'}
           >Eliminar Historial
           </button>
+          
         </div>
 
       </section>

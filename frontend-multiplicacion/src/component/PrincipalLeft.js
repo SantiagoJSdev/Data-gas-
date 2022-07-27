@@ -22,6 +22,7 @@ export const PrincipalLeft = () => {
 
         e.preventDefault()
         let validacionForm = validate(numero1, numero2)
+        console.log(validacionForm)
 
         if (!Object.keys(validacionForm).length) {
 
@@ -42,7 +43,7 @@ export const PrincipalLeft = () => {
         reset()
 
     }
-
+    console.log(!!resul.errors)
 
     return (
         <div className='left__container'>
@@ -52,7 +53,8 @@ export const PrincipalLeft = () => {
                 <div className='left__container--numero1'>
                     <label>N1</label>
                     <input
-                        placeholder='Ej: 123456'
+                        className={!!resul.errors ? !!resul.errors.numero1 ? 'activa-mensaje' : 'numero1__input' : 'numero1__input'}
+                        placeholder={!!resul.errors ? !!resul.errors.numero1 ? `${resul.errors.numero1}` : 'Ej: 123456' : 'Ej: 123456'}
                         autoComplete='off'
                         type='text'
                         name='numero1'
@@ -64,7 +66,8 @@ export const PrincipalLeft = () => {
                 <div className='left__container--numero1'>
                     <label>N2</label>
                     <input
-                        placeholder='Ej: 123456'
+                        className={!!resul.errors ? !!resul.errors.numero2 ? 'activa-mensaje' : 'numero1__input' : 'numero1__input'}
+                        placeholder={!!resul.errors ? !!resul.errors.numero2 ? `${resul.errors.numero2}` : 'Ej: 123456' : 'Ej: 123456'}
                         autoComplete='off'
                         type='text'
                         name='numero2'
@@ -75,10 +78,17 @@ export const PrincipalLeft = () => {
                 </div>
                 {
 
-                    (resul.errors && !Object.keys(resul.errors).length) ?
-                        ''
+                    !!resul.errors ?
+
+                        !!resul.errors.msg
+
+                            ?
+                            <h3 className='mensaje-form'>{resul.errors.msg}</h3>
+                            :
+                            ''
                         :
-                        <h3 className='mensaje-form'>{resul.errors}</h3>
+
+                        ''
                 }
 
                 <button type='submit' className='left__container--button'><i className="fas fa-calculator"></i>Calcular</button>

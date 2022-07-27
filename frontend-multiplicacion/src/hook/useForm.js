@@ -1,8 +1,9 @@
 
 import { useState } from 'react';
-
+ 
 
 export const useForm = ( initialState = {} ) => {
+
     const [values, setValues] = useState(initialState);
 
     const reset = () => {
@@ -16,7 +17,7 @@ export const useForm = ( initialState = {} ) => {
             ...values,
             [ target.name ]: target.value
         });
-      
+     
 
     }
 
