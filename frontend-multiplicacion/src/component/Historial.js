@@ -1,9 +1,13 @@
 
-import React from 'react'
+import React, { useContext } from 'react'
+import { ResultadoContext } from '../context/ResultadoContext';
 import '../styles/historial.css'
 
-export const Historial = ({ resul }) => {
+export const Historial = () => {
 
+
+  const { resul, dispatch } = useContext(ResultadoContext);
+ 
    
   return (
     <>
@@ -12,12 +16,15 @@ export const Historial = ({ resul }) => {
         <ul>
 
           {
-            resul ?
-              resul.map((elemento, ind) => (
-                <li key={elemento + ind}>{elemento}</li>
+            resul.resultado ?
+            resul.resultado.map((elemento, ind) => (
+             
+                <li key={elemento + ind}><p>{elemento}</p></li>
+                
               ))
+
               :
-              <li>64644641156665</li>
+              <li>...</li>
 
           }
 

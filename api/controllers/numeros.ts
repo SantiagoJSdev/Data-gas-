@@ -13,7 +13,7 @@ export const getNumeros = async (req: Request, res: Response) => {
 
     res.json(nums.map(({ total }: any) => total));
 }
-
+  
 
 //funcion para guarda el resultado en base de dato y devuelve el total multiplicacion
 export const postResultado = async (req: Request, res: Response) => {

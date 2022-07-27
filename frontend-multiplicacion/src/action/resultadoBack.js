@@ -3,7 +3,7 @@
 export const allResultados = async () => {
 
     let url = 'http://localhost:8000/api/resultados'
-     
+
 
     const get = await fetch(url, {
         method: 'GET',
@@ -12,7 +12,7 @@ export const allResultados = async () => {
         }
     });
     let resul = await get.json();
- 
+
     return resul
 }
 
@@ -30,6 +30,22 @@ export const postGuardar = async (data) => {
         body: JSON.stringify(data)
     });
     let resul = await post.json();
+
+    return resul
+}
+
+export const deleteResultados = async () => {
+
+    let url = 'http://localhost:8000/api/resultados'
+
+
+    const get = await fetch(url, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    let resul = await get.json();
     
     return resul
 }

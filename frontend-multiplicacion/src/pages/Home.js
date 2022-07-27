@@ -1,11 +1,16 @@
-import React, { useState } from 'react'
-import { allResultados } from '../action/resultadoBack'
+import React, { useContext, useState } from 'react'
+import { allResultados, deleteResultados } from '../action/resultadoBack'
 import { Historial } from '../component/Historial'
 import { PrincipalLeft } from '../component/PrincipalLeft'
 import { PrincipalRight } from '../component/PrincipalRight'
+import { ResultadoContext } from '../context/ResultadoContext'
 import '../styles/home.css'
+import { types } from '../types/types'
 
 export const Home = () => {
+
+  const { resul, dispatch } = useContext(ResultadoContext);
+
 
   const [state, setState] = useState({
     activo: false
@@ -16,7 +21,18 @@ export const Home = () => {
 
     let resul = await allResultados()
     setState((item) => ({ ...item, activo: !item.activo, resul }))
-    // console.log(state)
+    dispatch({
+      type: types.historial,
+      payload: resul
+    })
+  }
+
+  const handleEliminarHistorial = async () => {
+    let resultado = await deleteResultados()
+    dispatch({
+      type: types.deleteResultado,
+      payload: []
+    })
 
   }
 
@@ -37,7 +53,6 @@ export const Home = () => {
               </div>
               :
               <PrincipalLeft />
-
           }
 
         </div>
@@ -45,11 +60,10 @@ export const Home = () => {
           {
             activo ?
               <Historial
-                resul={state.resul}
+              // resul={state.resul}
               />
               :
               <PrincipalRight />
-
           }
 
 
@@ -57,6 +71,11 @@ export const Home = () => {
             onClick={handleVerHistorial}
             className={activo ? 'display__btn' : 'right__historialBtn'}
           >Ver Historial
+          </button>
+          <button
+            onClick={handleEliminarHistorial}
+            className={activo ? 'right__historialBtn' : 'display__btn'}
+          >Eliminar Historial
           </button>
         </div>
 

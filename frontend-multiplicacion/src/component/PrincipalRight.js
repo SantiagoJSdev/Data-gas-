@@ -14,8 +14,8 @@ export const PrincipalRight = () => {
                 <div className='right__content--resultado'>
                     <h2>Resultado</h2>
                     {
-                        resul.resultado ?
-                        <p>{resul.resultado}</p>
+                        resul.postResultado ?
+                        <p>{resul.postResultado}</p>
                         : 
                         <p>...</p>
                     }

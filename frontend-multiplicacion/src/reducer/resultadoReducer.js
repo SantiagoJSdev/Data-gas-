@@ -9,14 +9,25 @@ export const resultadoReducer = (state = {}, action) => {
         case types.postResul:
             return {
                 ...state,
-                resultado: action.payload,
+                postResultado: action.payload,
+                // resultado: [],
                 errors: {}
             }
         case types.validate:
             return {
                 ...state,
                 errors: action.payload
-
+            }
+        case types.deleteResultado:
+            return {
+                ...state,
+                resultado: action.payload
+            }
+        case types.historial:
+            return {
+                ...state,
+                resultado: action.payload,
+                postResultado: ''
             }
 
         default:
