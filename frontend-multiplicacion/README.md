@@ -1,16 +1,22 @@
-## Recursos: Utilice en el backend, para el cálculo de los números grandes una librería muy liviana de JavaScript llamada decimal.js-light la misma le paso los valores numericos como string, aunque también obtuve el mismo resultado utilizando JavaScript puro realizando los cálculos con los tipos de datos BigInt.
+# Readme:
 
-Backend: Node + JavaScript + TypeScript + sequelize + postgreSQL + express
+## Frontend tecnologías utilizadas:
 
-Para iniciar la aplicación compilo la aplicación de typescript con los comandos tsc ó tsc --watch, luego se crea en la carpeta dist que seria lo que se va desplegar en el servidor para iniciar node con el comando node dist/app.js
+Javascript, framework de React y Css para iniciar npm start
 
+## Backend tecnologías utilizadas:
 
-Frontend: Realizado con Javascript, framework de React y Css para iniciar npm start
+Node + JavaScript + TypeScript + sequelize + postgreSQL + express
 
-# Realice comprobaciones y realiza en calculo tanto el backend como desde el frontend 
+Para iniciar compilo la aplicación con typescript utilizo los comandos tsc ó tsc --watch, luego se crea en la carpeta dist que sería lo que se va desplegar en el servidor, para iniciar node con el comando node dist/app.js
+
+Recursos:
+Para el cálculo de los números grandes utilice una librería muy liviana de JavaScript llamada decimal.js-light, le paso los valores numéricos como string, la misma usa los tipos de datos BigInt.
+
+# Realice comprobaciones y el cálculo tanto en el backend como en el frontend y funciona correctamente.
 
 Recuerda utilizar npm install antes de levantar la app
 
 Muchas Gracias y quedo atento ante cualquier inquietud.
 
-## santiagojose17@gmail.com
+### santiagojose17@gmail.com
