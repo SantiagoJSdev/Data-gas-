@@ -29,7 +29,7 @@ export const Home = () => {
   }
 
   const handleEliminarHistorial = async () => {
-    let resultado = await deleteResultados()
+    await deleteResultados()
     dispatch({
       type: types.deleteResultado,
       payload: []
@@ -41,7 +41,6 @@ export const Home = () => {
   return (
     <div className='home__container'>
 
-
       <section className='home__principal'>
         <div className='home__principal--background '></div>
 
@@ -50,13 +49,13 @@ export const Home = () => {
             activo ?
               <div className='left__contentBtn'>
                 <i className="fas fa-cog rotate"></i>
-                <button onClick={handleVerHistorial}>Calcular</button>
+                <button onClick={handleVerHistorial}> <i className="fas fa-calculator"></i>Calcular</button>
               </div>
               :
               <PrincipalLeft />
           }
-
         </div>
+
         <div className='home__principal--right'>
           {
             activo ?
@@ -79,11 +78,10 @@ export const Home = () => {
           </button>
 
         </div>
-
       </section>
 
       <section className='home__footer'>
-          <Footer/>
+        <Footer />
       </section>
 
     </div>

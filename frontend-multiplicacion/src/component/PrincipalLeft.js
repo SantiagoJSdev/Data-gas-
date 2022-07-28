@@ -46,7 +46,7 @@ export const PrincipalLeft = () => {
 
     return (
         <div className='left__container'>
-            <h1>Para calcular tus servivios ingresa:</h1>
+            <h1>Para calcular tus servicios ingresa:</h1>
 
             <form onSubmit={handleSubmit}>
                 <div className='left__container--numero1'>

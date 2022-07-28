@@ -116,6 +116,9 @@ body {
     cursor: pointer;
     transition: all 1s ease;
 }
+.left__contentBtn > button > i{
+   margin-right: 20px;
+}
 
 
 .left__contentBtn > button:hover {
@@ -149,10 +152,10 @@ body {
     .home__principal--right {
         width: 50%;
         height: 70%;
-        margin-right: 25px;
+        margin-right: 1.5625rem;
     }
     .home__principal--left {
-      margin-left: 10px;
+      margin-left: 0.625rem;
     }
 }
 
@@ -173,7 +176,7 @@ body {
         flex-direction: column;
     }
     .home__principal--left {
-        margin-top: 30px;
+        margin-top: 1.875rem;
       }
       .home__principal--right {
         width: 70%;

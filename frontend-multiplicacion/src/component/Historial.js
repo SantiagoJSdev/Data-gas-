@@ -17,7 +17,7 @@ export const Historial = () => {
 
           {
             resul.resultado ?
-            resul.resultado.map((elemento, ind) => (
+            resul.resultado.reverse().map((elemento, ind) => (
              
                 <li key={elemento + ind}><p>{elemento}</p></li>
                 
@@ -27,8 +27,6 @@ export const Historial = () => {
               <li>...</li>
 
           }
-
-
 
         </ul>
       </div>

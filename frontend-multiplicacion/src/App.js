@@ -1,6 +1,6 @@
  
 import { useReducer } from 'react';
-import './App.css';
+ 
 import { ResultadoContext } from './context/ResultadoContext';
 import { Home } from './pages/Home';
 

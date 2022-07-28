@@ -47,8 +47,7 @@
 }
 .left__container--numero1>input::placeholder {
     color: black;
-    padding-left: 9.6rem;
-
+   
 }
 
 .left__container--numero1>input:focus {
@@ -76,12 +75,9 @@
 
 .left__container--button>i {
     margin-right: 1.875rem;
-
 }
-
  .mensaje-form{
     font-size: calc(1em + 1vw);
-    /* margin-top: 40px; */
     color: #ffffff;
     align-self: center;
     transform: translateY(1.875rem);
@@ -113,16 +109,6 @@
         font-size: calc(0.8em + 0.8vw);   
         text-align: center;
      }
-     .left__container--numero1>input::placeholder {
-    
-        padding-left: 6.6rem;
-    
-    }
+      
 }
-@media screen and (max-width:800px) {
-   
-     .left__container--numero1>input::placeholder {
-        padding-left: 4.6rem;
-    }
  
-}

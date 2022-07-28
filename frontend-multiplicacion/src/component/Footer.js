@@ -7,7 +7,7 @@ export const Footer = () => {
         <>
             <div className='footer__contacto'>
                 <h1>Contacto</h1>
-                <h3>info@datagas.com.co</h3>
+                <h3><i className="fas fa-envelope"></i>info@datagas.com.co</h3>
                 <p><i className="fas fa-phone"></i>321-589-6352</p>
             </div>
             <div className='footer__contacto'>
