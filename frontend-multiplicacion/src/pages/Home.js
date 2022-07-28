@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { allResultados, deleteResultados } from '../action/resultadoBack'
+import { Footer } from '../component/Footer'
 import { Historial } from '../component/Historial'
 import { PrincipalLeft } from '../component/PrincipalLeft'
 import { PrincipalRight } from '../component/PrincipalRight'
@@ -76,13 +77,13 @@ export const Home = () => {
             className={activo ? 'right__historialBtn' : 'display__btn'}
           >Eliminar Historial
           </button>
-          
+
         </div>
 
       </section>
 
       <section className='home__footer'>
-
+          <Footer/>
       </section>
 
     </div>

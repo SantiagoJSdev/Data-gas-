@@ -1,0 +1,26 @@
+
+.footer__contacto{
+    width: 30%;
+    height: 100%;
+     padding-left: 1.25rem;
+    padding-top: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    color: #ffffffff;
+
+}
+.footer__contacto > p > i{
+    margin-right: 0.625rem;
+}
+.footer__contacto > h3 > i{
+    margin-right: 0.625rem;
+}
+ 
+@media screen and (max-width:800px) {
+    .footer__contacto{
+        font-size: calc(0.5em + 0.5vw);
+    
+    }
+   
+}

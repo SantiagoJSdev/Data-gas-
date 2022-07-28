@@ -22,7 +22,6 @@ export const PrincipalLeft = () => {
 
         e.preventDefault()
         let validacionForm = validate(numero1, numero2)
-        console.log(validacionForm)
 
         if (!Object.keys(validacionForm).length) {
 
@@ -43,7 +42,7 @@ export const PrincipalLeft = () => {
         reset()
 
     }
-    console.log(!!resul.errors)
+    
 
     return (
         <div className='left__container'>
